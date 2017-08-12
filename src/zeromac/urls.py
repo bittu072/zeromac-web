@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from zerousers.views import (zero_login, zero_register, zero_logout)
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/', zero_login, name="login"),
 ]
